@@ -1,0 +1,969 @@
+{
+    "catalogs": [
+        {
+            "key": "/catalogs/demand",
+            "title": "Demand Detail",
+            "itemName": "Demand",
+            "fileUploadFormats": ".csv, .xls, .xlsx",
+            "fileUploadMaxByteSize": 52428800,
+            "fileUploadUrl": "",
+            "hideNonRegisteredColumns": false,
+            "partNumberColumnName": null,
+            "uniqueIdColumnName": null,
+            "getCatalogUri": "http://localhost:8086/api-service/demand/v1/criteria",
+            "getCatalogMethod": "PUT",
+            "getCatalogDefaultPayloadBase64": "ewogICJzY0lkIjogIjVkMzc2OWNhYTM1YjA4MDAwMTFiZTg0NCIKfQ==",
+            "saveItemUri": "http://localhost:8086/api-service/demand/v1/save",
+            "columns": [
+                {
+                    "headerName": "DemandId",
+                    "columnType": "OnePDLNumber",
+                    "internalName": "demandId",
+                    "hidden": true
+                },
+                {
+                    "headerName": "HostPartId",
+                    "columnType": "OnePDLString",
+                    "internalName": "hostPartId",
+                    "order": 2
+                },
+                {
+                    "headerName": "HostLocId",
+                    "columnType": "OnePDLString",
+                    "internalName": "hostLocId",
+                    "order": 3
+                },
+                {
+                    "headerName": "DSHostId",
+                    "columnType": "OnePDLString",
+                    "internalName": "dsHostId",
+                    "order": 4
+                },
+                {
+                    "headerName": "HistoryBegDate",
+                    "columnType": "OnePDLString",
+                    "internalName": "historyBegDate",
+                    "order": 5
+                },
+                {
+                    "headerName": "FileName",
+                    "columnType": "OnePDLString",
+                    "internalName": "fileName",
+                    "hidden": true
+                },
+                {
+                    "headerName": "HostDMDDetailId",
+                    "columnType": "OnePDLString",
+                    "internalName": "historyNo_i",
+                    "order": 1,
+                    "sticky": true
+                },
+                {
+                    "headerName": "Quantity",
+                    "columnType": "OnePDLNumber",
+                    "internalName": "quantity",
+                    "hidden": true
+                },
+                {
+                    "headerName": "VM",
+                    "columnType": "OnePDLString",
+                    "internalName": "vm",
+                    "hidden": true
+                },
+                {
+                    "headerName": "HistoryAmount",
+                    "columnType": "OnePDLNumber",
+                    "internalName": "netQty",
+                    "order": 6
+                },
+                {
+                    "headerName": "Station",
+                    "columnType": "OnePDLString",
+                    "internalName": "station",
+                    "hidden": true
+                },
+                {
+                    "headerName": "BatchNo",
+                    "columnType": "OnePDLString",
+                    "internalName": "batchNo",
+                    "hidden": true
+                },
+                {
+                    "headerName": "PickSlipNo",
+                    "columnType": "OnePDLString",
+                    "internalName": "pickSlipNo",
+                    "hidden": true
+                },
+                {
+                    "headerName": "Type",
+                    "columnType": "OnePDLString",
+                    "internalName": "type",
+                    "hidden": true
+                },
+                {
+                    "headerName": "ScId",
+                    "columnType": "OnePDLString",
+                    "internalName": "scId",
+                    "hidden": true
+                },
+                {
+                    "headerName": "BuId",
+                    "columnType": "OnePDLString",
+                    "internalName": "buId",
+                    "hidden": true
+                },
+                {
+                    "headerName": "CreatedDate",
+                    "columnType": "OnePDLString",
+                    "internalName": "createdDate",
+                    "hidden": true
+                },
+                {
+                    "headerName": "CreatedBy",
+                    "columnType": "OnePDLString",
+                    "internalName": "createdBy",
+                    "hidden": true
+                },
+                {
+                    "headerName": "UpdatedDate",
+                    "columnType": "OnePDLString",
+                    "internalName": "updatedDate",
+                    "hidden": true
+                },
+                {
+                    "headerName": "UpdatedBy",
+                    "columnType": "OnePDLString",
+                    "internalName": "updatedBy",
+                    "hidden": true
+                },
+                {
+                    "headerName": "TransactionStatus",
+                    "columnType": "OnePDLString",
+                    "internalName": "transStatus",
+                    "hidden": true
+                },
+                {
+                    "headerName": "Non-Recurring",
+                    "columnType": "OnePDLCheckbox",
+                    "internalName": "nonRecurringFlag",
+                    "order": 7
+                }
+            ]
+        },
+        {
+            "key": "/catalogs/locations",
+            "title": "Location Master",
+            "itemName": "Location",
+            "fileUploadFormats": ".csv, .xls, .xlsx",
+            "fileUploadMaxByteSize": 52428800,
+            "fileUploadUrl": "",
+            "hideNonRegisteredColumns": false,
+            "partNumberColumnName": null,
+            "uniqueIdColumnName": null,
+            "getCatalogUri": "http://localhost:8005//api-service/location/v1/criteria",
+            "getCatalogMethod": "POST",
+            "getCatalogDefaultPayloadBase64": "ewogICJzY0lkIjogIjVkMzc2OWNhYTM1YjA4MDAwMTFiZTg0NCIKfQ==",
+            "columns": [
+                {
+                    "headerName": "ScId",
+                    "columnType": "OnePDLString",
+                    "internalName": "scId",
+                    "hidden": true
+                },
+                {
+                    "headerName": "HostLocId",
+                    "columnType": "OnePDLString",
+                    "internalName": "hostLocId",
+                    "sticky": true,
+                    "order": 1,
+                    "hidden": true
+                },
+                {
+                    "headerName": "HostLocId",
+                    "columnType": "OnePDLString",
+                    "internalName": "hostLocIdWithScCode",
+                    "sticky": true,
+                    "order": 1
+                },
+                {
+                    "headerName": "HostRegionId",
+                    "columnType": "OnePDLString",
+                    "internalName": "hostRegionId",
+                    "order": 4
+                },
+                {
+                    "headerName": "HostLocTypeId",
+                    "columnType": "OnePDLString",
+                    "internalName": "hostLocTypeId",
+                    "order": 7
+                },
+                {
+                    "headerName": "HostParentLocId",
+                    "columnType": "OnePDLString",
+                    "internalName": "hostParentLocId",
+                    "order": 6
+                },
+                {
+                    "headerName": "LocActive",
+                    "columnType": "OnePDLString",
+                    "internalName": "locActive",
+                    "order": 8
+                },
+                {
+                    "headerName": "UpdatedBy",
+                    "columnType": "OnePDLString",
+                    "internalName": "updatedBy",
+                    "hidden": true
+                },
+                {
+                    "headerName": "UpdatedDate",
+                    "columnType": "OnePDLString",
+                    "internalName": "updatedDate",
+                    "hidden": true
+                },
+                {
+                    "headerName": "LocName",
+                    "columnType": "OnePDLString",
+                    "internalName": "locName",
+                    "order": 2,
+                    "hidden": true
+                },
+                {
+                    "headerName": "LocName",
+                    "columnType": "OnePDLString",
+                    "internalName": "locNameWithScCode",
+                    "order": 2
+                },
+                {
+                    "headerName": "LocDescription",
+                    "columnType": "OnePDLString",
+                    "internalName": "locDescription",
+                    "order": 3
+                },
+                {
+                    "headerName": "ProcAllowed",
+                    "columnType": "OnePDLString",
+                    "internalName": "procAllowed",
+                    "order": 10
+                },
+                {
+                    "headerName": "RepaAllowed",
+                    "columnType": "OnePDLString",
+                    "internalName": "repaAllowed",
+                    "order": 11
+                },
+                {
+                    "headerName": "AircraftType",
+                    "columnType": "OnePDLString",
+                    "internalName": "ac_type",
+                    "order": 9
+                },
+                {
+                    "headerName": "HostNetworkId",
+                    "columnType": "OnePDLString",
+                    "internalName": "hostNetworkId",
+                    "order": 5
+                },
+                {
+                    "headerName": "BuId",
+                    "columnType": "OnePDLString",
+                    "internalName": "buId",
+                    "hidden": true
+                },
+                {
+                    "headerName": "Status",
+                    "columnType": "OnePDLNumber",
+                    "internalName": "status",
+                    "hidden": true
+                },
+                {
+                    "headerName": "CreatedBy",
+                    "columnType": "OnePDLString",
+                    "internalName": "createdBy",
+                    "hidden": true
+                },
+                {
+                    "headerName": "CreatedDate",
+                    "columnType": "OnePDLString",
+                    "internalName": "createdDate",
+                    "hidden": true
+                },
+                {
+                    "headerName": "Id",
+                    "columnType": "OnePDLString",
+                    "internalName": "id",
+                    "hidden": true
+                }
+            ]
+        },
+        {
+            "key": "/catalogs/parts",
+            "title": "Part Master",
+            "itemName": "Part",
+            "fileUploadFormats": ".csv, .xls, .xlsx",
+            "fileUploadMaxByteSize": 52428800,
+            "fileUploadUrl": "",
+            "hideNonRegisteredColumns": false,
+            "partNumberColumnName": "partNumber",
+            "uniqueIdColumnName": "partMasterId",
+            "getCatalogUri": "http://localhost:8081/api-service/part-master/v1/criteria",
+            "getCatalogMethod": "PUT",
+            "getCatalogDefaultPayloadBase64": "ewogICJzY0lkIjogIjVkMzc2OWNhYTM1YjA4MDAwMTFiZTg0NCIKfQ==",
+            "columns": [
+                {
+                    "headerName": "ID",
+                    "columnType": "OnePDLNumber",
+                    "internalName": "partMasterId",
+                    "order": 0,
+                    "sticky": true,
+                    "hidden": true
+                },
+                {
+                    "headerName": "DownloadId",
+                    "columnType": "OnePDLString",
+                    "internalName": "downloadId",
+                    "hidden": true
+                },
+                {
+                    "headerName": "HostPartId",
+                    "columnType": "OnePDLString",
+                    "internalName": "hostPartId",
+                    "order": 1,
+                    "sticky": true
+                },
+                {
+                    "headerName": "PartNumber",
+                    "columnType": "OnePDLString",
+                    "internalName": "partNumber",
+                    "order": 3
+                },
+                {
+                    "headerName": "PartName",
+                    "columnType": "OnePDLString",
+                    "internalName": "partName",
+                    "order": 2
+                },
+                {
+                    "headerName": "HostPartTypeId",
+                    "columnType": "OnePDLString",
+                    "internalName": "hostPartTypeId",
+                    "order": 4
+                },
+                {
+                    "headerName": "HostPartFamilyId",
+                    "columnType": "OnePDLString",
+                    "internalName": "hostPartFamilyId",
+                    "hidden": true
+                },
+                {
+                    "headerName": "PartDescription",
+                    "columnType": "OnePDLString",
+                    "internalName": "partDescription",
+                    "hidden": true
+                },
+                {
+                    "headerName": "HostPartCriticalId",
+                    "columnType": "OnePDLString",
+                    "internalName": "hostPartCriticalId",
+                    "hidden": true
+                },
+                {
+                    "headerName": "Price",
+                    "columnType": "OnePDLCurrency",
+                    "internalName": "price",
+                    "order": 5
+                },
+                {
+                    "headerName": "HostReplLocHierId",
+                    "columnType": "OnePDLString",
+                    "internalName": "hostReplLocHierId",
+                    "order": 9
+                },
+                {
+                    "headerName": "Effectivity",
+                    "columnType": "OnePDLString",
+                    "internalName": "effectivity",
+                    "order": 10
+                },
+                {
+                    "headerName": "PartRepairable",
+                    "columnType": "OnePDLString",
+                    "internalName": "partRepairable",
+                    "order": 6,
+                    "hidden": true
+                },
+                {
+                    "headerName": "PartProcurable",
+                    "columnType": "OnePDLString",
+                    "internalName": "partProcurable",
+                    "order": 8,
+                    "hidden": true
+                },
+                {
+                    "headerName": "PartActive",
+                    "columnType": "OnePDLString",
+                    "internalName": "partActive",
+                    "order": 7,
+                    "hidden": true
+                },
+                {
+                    "headerName": "Status",
+                    "columnType": "OnePDLString",
+                    "internalName": "status",
+                    "hidden": true
+                },
+                {
+                    "headerName": "MatClass",
+                    "columnType": "OnePDLString",
+                    "internalName": "matClass",
+                    "hidden": true
+                },
+                {
+                    "headerName": "DefaultSupplier",
+                    "columnType": "OnePDLString",
+                    "internalName": "defaultSupplier",
+                    "hidden": true
+                },
+                {
+                    "headerName": "ScId",
+                    "columnType": "OnePDLString",
+                    "internalName": "scId",
+                    "hidden": true
+                },
+                {
+                    "headerName": "BuId",
+                    "columnType": "OnePDLString",
+                    "internalName": "buId",
+                    "hidden": true
+                },
+                {
+                    "headerName": "FileName",
+                    "columnType": "OnePDLString",
+                    "internalName": "fileName",
+                    "hidden": true
+                },
+                {
+                    "headerName": "CreatedDate",
+                    "columnType": "OnePDLString",
+                    "internalName": "createdDate",
+                    "hidden": true
+                },
+                {
+                    "headerName": "CreatedBy",
+                    "columnType": "OnePDLString",
+                    "internalName": "createdBy",
+                    "hidden": true
+                },
+                {
+                    "headerName": "UpdatedDate",
+                    "columnType": "OnePDLString",
+                    "internalName": "updatedDate",
+                    "hidden": true
+                },
+                {
+                    "headerName": "UpdatedBy",
+                    "columnType": "OnePDLString",
+                    "internalName": "updatedBy",
+                    "hidden": true
+                },
+                {
+                    "headerName": "TransactionStatus",
+                    "columnType": "OnePDLString",
+                    "internalName": "transStatus",
+                    "hidden": true
+                }
+            ]
+        },
+        {
+            "key": "/catalogs/skus",
+            "title": "SKU",
+            "itemName": "SKU",
+            "fileUploadFormats": ".csv, .xls, .xlsx",
+            "fileUploadMaxByteSize": 52428800,
+            "fileUploadUrl": "",
+            "hideNonRegisteredColumns": false,
+            "partNumberColumnName": null,
+            "uniqueIdColumnName": "skuId",
+            "getCatalogUri": "http://localhost:8013//api-service/sku/v1/criteria",
+            "getCatalogMethod": "POST",
+            "getCatalogDefaultPayloadBase64": "ewogICJzY0lkIjogIjVkMzc2OWNhYTM1YjA4MDAwMTFiZTg0NCIKfQ==",
+            "columns": [
+                {
+                    "headerName": "Id",
+                    "columnType": "OnePDLNumber",
+                    "internalName": "skuId",
+                    "sticky": true,
+                    "hidden": true
+                },
+                {
+                    "headerName": "HostPartId",
+                    "columnType": "OnePDLString",
+                    "internalName": "hostPartId",
+                    "order": 1,
+                    "sticky": true
+                },
+                {
+                    "headerName": "HostLocId",
+                    "columnType": "OnePDLString",
+                    "internalName": "hostLocId",
+                    "order": 2
+                },
+                {
+                    "headerName": "SKUActive",
+                    "columnType": "OnePDLString",
+                    "internalName": "skuActive",
+                    "order": 6
+                },
+                {
+                    "headerName": "MaterialClass",
+                    "columnType": "OnePDLString",
+                    "internalName": "materialClass",
+                    "order": 3
+                },
+                {
+                    "headerName": "DefaultSupplier",
+                    "columnType": "OnePDLString",
+                    "internalName": "defaultSupplier",
+                    "order": 4
+                },
+                {
+                    "headerName": "IOCriticality",
+                    "columnType": "OnePDLString",
+                    "internalName": "ioCriticality",
+                    "order": 7
+                },
+                {
+                    "headerName": "VendorDirect",
+                    "columnType": "OnePDLString",
+                    "internalName": "vendorDirect",
+                    "order": 8
+                },
+                {
+                    "headerName": "Scope",
+                    "columnType": "OnePDLString",
+                    "internalName": "scope",
+                    "order": 5
+                },
+                {
+                    "headerName": "Status",
+                    "columnType": "OnePDLString",
+                    "internalName": "status",
+                    "hidden": true
+                },
+                {
+                    "headerName": "SCID",
+                    "columnType": "OnePDLString",
+                    "internalName": "scId",
+                    "order": 9
+                },
+                {
+                    "headerName": "buId",
+                    "columnType": "OnePDLString",
+                    "internalName": "buId",
+                    "hidden": true
+                },
+                {
+                    "headerName": "transactionStatus",
+                    "columnType": "OnePDLString",
+                    "internalName": "transactionStatus",
+                    "hidden": true
+                },
+                {
+                    "headerName": "createdDate",
+                    "columnType": "OnePDLString",
+                    "internalName": "createdDate",
+                    "hidden": true
+                },
+                {
+                    "headerName": "createdBy",
+                    "columnType": "OnePDLString",
+                    "internalName": "createdBy",
+                    "hidden": true
+                },
+                {
+                    "headerName": "UpdatedDate",
+                    "columnType": "OnePDLString",
+                    "internalName": "updatedDate",
+                    "order": 10
+                },
+                {
+                    "headerName": "UpdatedBy",
+                    "columnType": "OnePDLString",
+                    "internalName": "updatedBy",
+                    "order": 11
+                }
+            ]
+        },
+        {
+            "key": "/catalogs/causal",
+            "title": "Causal Value",
+            "itemName": "Causal",
+            "fileUploadFormats": ".csv, .xls, .xlsx",
+            "fileUploadMaxByteSize": 52428800,
+            "fileUploadUrl": "",
+            "hideNonRegisteredColumns": false,
+            "partNumberColumnName": null,
+            "uniqueIdColumnName": "skuId",
+            "getCatalogUri": "http://localhost:8084/api-service/causal/v1/criteria",
+            "getCatalogMethod": "PUT",
+            "getCatalogDefaultPayloadBase64": "ewogICJzY0lkIjogIjVkMzc2OWNhYTM1YjA4MDAwMTFiZTg0NCIKfQ==",
+            "saveItemUri": "http://localhost:8084/api-service/causal/v1/save",
+            "columns": [
+                {
+                    "headerName": "HostProductId",
+                    "columnType": "OnePDLString",
+                    "internalName": "aircraftType",
+                    "order": 1
+                },
+                {
+                    "headerName": "HostLocId",
+                    "columnType": "OnePDLString",
+                    "internalName": "arrival",
+                    "order": 2
+                },
+                {
+                    "headerName": "StartDate",
+                    "columnType": "OnePDLString",
+                    "internalName": "flightHrsStartDate",
+                    "order": 3
+                },
+                {
+                    "headerName": "EndDate",
+                    "columnType": "OnePDLString",
+                    "internalName": "flightHrsEndDate",
+                    "order": 4
+                },
+                {
+                    "headerName": "CausalValue",
+                    "columnType": "OnePDLNumber",
+                    "internalName": "flightHours",
+                    "order": 5
+                },
+                {
+                    "headerName": "HostCausalTypeId",
+                    "columnType": "OnePDLString",
+                    "internalName": "hostCausalTypeId",
+                    "order": 6
+                },
+                {
+                    "headerName": "HostForecastStreamId",
+                    "columnType": "OnePDLString",
+                    "internalName": "hostForeCastStreamId",
+                    "order": 7
+                },
+                {
+                    "headerName": "HostInstallSiteId",
+                    "columnType": "OnePDLString",
+                    "internalName": "hostInstallSiteId",
+                    "order": 8
+                },
+                {
+                    "headerName": "causalId",
+                    "columnType": "OnePDLNumber",
+                    "internalName": "causalId",
+                    "hidden": true
+                },
+                {
+                    "headerName": "createdBy",
+                    "columnType": "OnePDLString",
+                    "internalName": "createdBy",
+                    "hidden": true
+                },
+                {
+                    "headerName": "createdDate",
+                    "columnType": "OnePDLString",
+                    "internalName": "createdDate",
+                    "hidden": true
+                },
+                {
+                    "headerName": "updatedBy",
+                    "columnType": "OnePDLString",
+                    "internalName": "updatedBy",
+                    "hidden": true
+                },
+                {
+                    "headerName": "updatedDate",
+                    "columnType": "OnePDLString",
+                    "internalName": "updatedDate",
+                    "hidden": true
+                },
+                {
+                    "headerName": "scId",
+                    "columnType": "OnePDLString",
+                    "internalName": "scId",
+                    "hidden": true
+                },
+                {
+                    "headerName": "buId",
+                    "columnType": "OnePDLString",
+                    "internalName": "buId",
+                    "hidden": true
+                },
+                {
+                    "headerName": "acRegistr",
+                    "columnType": "OnePDLString",
+                    "internalName": "acRegistr",
+                    "hidden": true
+                },
+                {
+                    "headerName": "status",
+                    "columnType": "OnePDLNumber",
+                    "internalName": "status",
+                    "hidden": true
+                },
+                {
+                    "headerName": "flightMins",
+                    "columnType": "OnePDLNumber",
+                    "internalName": "flightMins",
+                    "hidden": true
+                },
+                {
+                    "headerName": "transStatus",
+                    "columnType": "OnePDLNumber",
+                    "internalName": "transStatus",
+                    "hidden": true
+                }
+            ]
+        },
+        {
+            "key": "/catalogs/product-rollout",
+            "title": "Product Rollout",
+            "itemName": "Product Rollout",
+            "fileUploadFormats": ".csv, .xls, .xlsx",
+            "fileUploadMaxByteSize": 52428800,
+            "fileUploadUrl": "",
+            "hideNonRegisteredColumns": false,
+            "partNumberColumnName": null,
+            "uniqueIdColumnName": "id",
+            "getCatalogUri": "http://localhost:8060/api-service/product-rollout/v1/criteria",
+            "getCatalogMethod": "PUT",
+            "getCatalogDefaultPayloadBase64": "ewogICJzY0lkIjogIjVkMzc2OWNhYTM1YjA4MDAwMTFiZTg0NCIKfQ==",
+            "saveItemUri": "http://localhost:8060/api-service/product-rollout/v1/save",
+            "columns": [
+                {
+                    "headerName": "HostProductId",
+                    "columnType": "OnePDLString",
+                    "internalName": "hostProductId",
+                    "order": 1
+                },
+                {
+                    "headerName": "HostLocId",
+                    "columnType": "OnePDLString",
+                    "internalName": "hostLocId",
+                    "order": 2
+                },
+                {
+                    "headerName": "ProdAmount",
+                    "columnType": "OnePDLNumber",
+                    "internalName": "prodAmount",
+                    "order": 3
+                },
+                {
+                    "headerName": "StartDate",
+                    "columnType": "OnePDLString",
+                    "internalName": "startDate",
+                    "order": 4
+                },
+                {
+                    "headerName": "EndDate",
+                    "columnType": "OnePDLString",
+                    "internalName": "endDate",
+                    "order": 5
+                },
+                {
+                    "headerName": "HostForecastStreamId",
+                    "columnType": "OnePDLString",
+                    "internalName": "hostForecastStreamId",
+                    "order": 6
+                },
+                {
+                    "headerName": "HostInstallSiteId",
+                    "columnType": "OnePDLString",
+                    "internalName": "hostInstallSiteId",
+                    "order": 7
+                },
+                {
+                    "headerName": "HostContractId",
+                    "columnType": "OnePDLString",
+                    "internalName": "hostContractId",
+                    "order": 8
+                },
+                {
+                    "headerName": "ScId",
+                    "columnType": "OnePDLString",
+                    "internalName": "scId",
+                    "hidden": true
+                },
+                {
+                    "headerName": "BuId",
+                    "columnType": "OnePDLString",
+                    "internalName": "buId",
+                    "hidden": true
+                },
+                {
+                    "headerName": "Status",
+                    "columnType": "OnePDLNumber",
+                    "internalName": "status",
+                    "hidden": true
+                },
+                {
+                    "headerName": "CreatedBy",
+                    "columnType": "OnePDLString",
+                    "internalName": "createdBy",
+                    "hidden": true
+                },
+                {
+                    "headerName": "CreatedDate",
+                    "columnType": "OnePDLString",
+                    "internalName": "createdDate",
+                    "hidden": true
+                },
+                {
+                    "headerName": "UpdatedBy",
+                    "columnType": "OnePDLString",
+                    "internalName": "updatedBy",
+                    "hidden": true
+                },
+                {
+                    "headerName": "UpdatedDate",
+                    "columnType": "OnePDLString",
+                    "internalName": "updatedDate",
+                    "hidden": true
+                },
+                {
+                    "headerName": "Id",
+                    "columnType": "OnePDLString",
+                    "internalName": "id",
+                    "hidden": true
+                },
+                {
+                    "headerName": "productRolloutId",
+                    "columnType": "OnePDLNumber",
+                    "internalName": "productRolloutId",
+                    "hidden": true
+                },
+                {
+                    "headerName": "transStatus",
+                    "columnType": "OnePDLString",
+                    "internalName": "transStatus",
+                    "hidden": true
+                }
+            ]
+        },
+        {
+            "key": "/catalogs/product-bom",
+            "title": "Product BOM",
+            "itemName": "Product BOM",
+            "fileUploadFormats": ".csv, .xls, .xlsx",
+            "fileUploadMaxByteSize": 52428800,
+            "fileUploadUrl": "",
+            "hideNonRegisteredColumns": false,
+            "partNumberColumnName": null,
+            "uniqueIdColumnName": "id",
+            "getCatalogUri": "http://localhost:8065/api-service/product-bom/v1/criteria",
+            "getCatalogMethod": "PUT",
+            "getCatalogDefaultPayloadBase64": "ewogICJzY0lkIjogIjVkMzc2OWNhYTM1YjA4MDAwMTFiZTg0NCIKfQ==",
+            "saveItemUri": "http://localhost:8065/api-service/product-bom/v1/save",
+            "columns": [
+                {
+                    "headerName": "HostProductId",
+                    "columnType": "OnePDLString",
+                    "internalName": "hostProductId",
+                    "order":1,
+                    "sticky": true
+                },
+                {
+                    "headerName": "HostPartId",
+                    "columnType": "OnePDLString",
+                    "internalName": "hostPartId",
+                    "order":2,
+                    "sticky": true
+                },
+                {
+                    "headerName": "HostIncludedPartId",
+                    "columnType": "OnePDLString",
+                    "internalName": "hostIncludedPartId",
+                    "order":3
+                },
+                {
+                    "headerName": "IncludedPartQty",
+                    "columnType": "OnePDLNumber",
+                    "internalName": "includedPartQty",
+                    "order":4
+                },
+                {
+                    "headerName": "IncludedPartAttachRate",
+                    "columnType": "OnePDLNumber",
+                    "internalName": "includedPartAttachRate",
+                    "order":5
+                },
+                {
+                    "headerName": "StartDate",
+                    "columnType": "OnePDLString",
+                    "internalName": "startDate",
+                    "order":6
+                },
+                {
+                    "headerName": "EndDate",
+                    "columnType": "OnePDLString",
+                    "internalName": "endDate",
+                    "order":7
+                },
+                {
+                    "headerName": "scId",
+                    "columnType": "OnePDLString",
+                    "internalName": "scId",
+                    "hidden": true
+                },
+                {
+                    "headerName": "buId",
+                    "columnType": "OnePDLString",
+                    "internalName": "buId",
+                    "hidden": true
+                },
+                {
+                    "headerName": "status",
+                    "columnType": "OnePDLNumber",
+                    "internalName": "status",
+                    "hidden": true
+                },
+                {
+                    "headerName": "createdBy",
+                    "columnType": "OnePDLString",
+                    "internalName": "createdBy",
+                    "hidden": true
+                },
+                {
+                    "headerName": "createdDate",
+                    "columnType": "OnePDLString",
+                    "internalName": "createdDate",
+                    "hidden": true
+                },
+                {
+                    "headerName": "updatedBy",
+                    "columnType": "OnePDLString",
+                    "internalName": "updatedBy",
+                    "hidden": true
+                },
+                {
+                    "headerName": "updatedDate",
+                    "columnType": "OnePDLString",
+                    "internalName": "updatedDate",
+                    "hidden": true
+                },
+                {
+                    "headerName": "productBomId",
+                    "columnType": "OnePDLString",
+                    "internalName": "productBomId",
+                    "hidden": true
+                },
+                {
+                    "headerName": "transStatus",
+                    "columnType": "OnePDLString",
+                    "internalName": "transStatus",
+                    "hidden": true
+                }
+            ]
+        }
+    ]
+}
